@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1267
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceRest_026_GianAlfaricha", "ServiceRest_026_GianAlfaricha\ServiceRest_026_GianAlfaricha.csproj", "{FD3450E6-ADDB-4126-A3ED-A5C9C2225E94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD3450E6-ADDB-4126-A3ED-A5C9C2225E94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3450E6-ADDB-4126-A3ED-A5C9C2225E94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3450E6-ADDB-4126-A3ED-A5C9C2225E94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3450E6-ADDB-4126-A3ED-A5C9C2225E94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C263B076-9EC2-4F99-BC73-834FEC9D1264}
+	EndGlobalSection
+EndGlobal
