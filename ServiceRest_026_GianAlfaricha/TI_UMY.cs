@@ -14,8 +14,8 @@ namespace ServiceRest_026_GianAlfaricha
         public string CreateMahasiswa(Mahasiswa mhs)
         {
             string msg = "GAGAL";
-            SqlConnection sqlcon = new SqlConnection("Data Source=LAPTOP-EH3OHBUA;Initial Catalog=TI UMY;Persist Security Info=True;User ID=sa;Password=Ghianalf07");
-            string query = string.Format("Insert into dbo.Mahasiswa values ('{0}', '{1}', '{2}', '{3}',)", mhs.nama, mhs.nim, mhs.prodi, mhs.angkatan);
+            SqlConnection sqlcon = new SqlConnection("Data Source=LAPTOP-EH3OHBUA;Initial Catalog=\"TI UMY\";Persist Security Info=True;User ID=sa;Password=Ghianalf07");
+            string query = string.Format("Insert into dbo.Mahasiswa values ('{0}', '{1}', '{2}', '{3}')", mhs.nim, mhs.nama, mhs.prodi, mhs.angkatan);
             //NIM = '{0}'", nim
             SqlCommand sqlcom = new SqlCommand(query, sqlcon); //yang dikirim ke sql
 
@@ -40,7 +40,7 @@ namespace ServiceRest_026_GianAlfaricha
         {
             List<Mahasiswa> mahas = new List<Mahasiswa>();
 
-            SqlConnection con = new SqlConnection("Data Source= LAPTOP-E77BQ7S0;Initial Catalog=\"TI UMY\";Persist Security Info=True;User ID=sa;Password=123");
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-EH3OHBUA;Initial Catalog=\"TI UMY\";Persist Security Info=True;User ID=sa;Password=Ghianalf07");
             string query = "select Nama, NIM, Prodi, Angkatan from dbo.Mahasiswa";
             SqlCommand com = new SqlCommand(query, con); //yang dikirim ke sql
 
@@ -51,8 +51,8 @@ namespace ServiceRest_026_GianAlfaricha
                 while (reader.Read())
                 {
                     Mahasiswa mhs = new Mahasiswa();
-                    mhs.nama = reader.GetString(0);
-                    mhs.nim = reader.GetString(1);
+                    mhs.nim = reader.GetString(0);
+                    mhs.nama = reader.GetString(1);
                     mhs.prodi = reader.GetString(2);
                     mhs.angkatan = reader.GetString(3);
 
@@ -71,8 +71,8 @@ namespace ServiceRest_026_GianAlfaricha
         public Mahasiswa GetMahasiswaByNIM(string nim)
         {
             Mahasiswa mhs = new Mahasiswa();
-            SqlConnection con = new SqlConnection("Data Source=LAPTOP-EH3OHBUA;Initial Catalog=TI UMY;Persist Security Info=True;User ID=sa;Password=Ghianalf07");
-            string query = string.Format("select Nama, NIM, Prodi, Angkatan from dbo.Mahasiswa where NIM = '{0}'", nim);
+            SqlConnection con = new SqlConnection("Data Source=LAPTOP-EH3OHBUA;Initial Catalog=\"TI UMY\";Persist Security Info=True;User ID=sa;Password=Ghianalf07");
+            string query = string.Format("select NIM, Nama,  Prodi, Angkatan from dbo.Mahasiswa where NIM = '{0}'", nim);
             SqlCommand com = new SqlCommand(query, con);
             try
             {
@@ -80,8 +80,8 @@ namespace ServiceRest_026_GianAlfaricha
                 SqlDataReader reader = com.ExecuteReader(); //mendapatkan data telah dieksekusi, dari select. hasil query ditaro di reader
                 while (reader.Read())
                 {
-                    mhs.nama = reader.GetString(0);
-                    mhs.nim = reader.GetString(1);
+                    mhs.nim = reader.GetString(0);
+                    mhs.nama = reader.GetString(1);
                     mhs.prodi = reader.GetString(2);
                     mhs.angkatan = reader.GetString(3);
                 }

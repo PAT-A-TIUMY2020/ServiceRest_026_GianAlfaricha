@@ -36,18 +36,18 @@ namespace ServiceRest_026_GianAlfaricha
     public class Mahasiswa
     {
         private string _nama, _nim, _prodi, _angkatan; //_adalah konvensi atau kesepakatan // variabel lokal
-        [DataMember(Order = 1)] //mengirim data untuk mengurutkan
-        public string nama
-        {
-            get { return _nama; }
-            set { _nama = value; }
-        }
-
-        [DataMember(Order = 2)]
+        [DataMember(Order = 1)]
         public string nim
         {
             get { return _nim; }
             set { _nim = value; }
+        }
+
+        [DataMember(Order = 2)] //mengirim data untuk mengurutkan
+        public string nama
+        {
+            get { return _nama; }
+            set { _nama = value; }
         }
 
         [DataMember(Order = 3)]
